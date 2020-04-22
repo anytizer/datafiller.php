@@ -26,7 +26,7 @@ class datafiller
     {
         $values = array_map(array($this, "wrap"), func_get_args());
         $values_csv = implode(", ", $values);
-        $sql = "INSERT INTO {$this->table} VALUES ({$values_csv});";
+        $sql = "INSERT INTO `{$this->table}` VALUES ({$values_csv});";
         echo "\r\n", $sql;
         return $this;
     }
